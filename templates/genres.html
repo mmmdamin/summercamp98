@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +7,7 @@
     <title>ژانرها</title>
 </head>
 <body>
+<img src="{% static 'img/logo.png' %}">
 {% for genre in genres %}
     <li>
         <a href="{% url 'genre' genre.id %}">{{ genre.id }} : {{ genre.name }}</a>
